@@ -1,0 +1,52 @@
+extends  ./jade/base
+block meta
+	-var title = "KOISHI"
+	-var description = ""
+	-var keyword = ""
+	-var og_name = "";
+	-var og_title = "";
+	-var og_description = "";
+	-var og_url = "";
+	-var og_img = "";
+	-var dir_root = "./";
+	-var css = "./css/index.css";
+block contents
+	.mv
+		.title
+			img.logo(src="./images/mv_chara.png")
+			img.text(src="./images/mv_title.png")
+	.profile
+		.title
+			img.text(src="./images/profile_title.png",alt="プロフィール PROFILE")
+		.activity
+			.midashi
+				p.
+					テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+			.activitycontent
+				p.
+					活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動活動
+		.autorimage
+			img.autor(src="")
+	.character
+		.title
+			img.text(src="")
+		.charas
+			.america
+				.left
+				.right
+			.japan
+				.left
+				.right
+			.secret
+	.stamp
+		.title
+			img.text(src="")
+		.stamps
+		.linestore
+	.contact
+		.title
+			img.text(src="")
+		.description
+			img.text(src="")
+		.mail
+			img.text(src="")

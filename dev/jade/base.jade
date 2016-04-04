@@ -1,0 +1,37 @@
+block meta
+	-var title = "";
+	-var description = "";
+	-var keyword = "";
+	-var og_name = "";
+	-var og_title = "";
+	-var og_description = "";
+	-var og_url = "";
+	-var og_img = "";
+	-var dir_root = "";
+	-var css = "";
+doctype
+html(html="ja")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv='Content-Type', content='text/html; charset=EUC-JP')
+		meta(http-equiv='content-language', content='ja')
+		meta(http-equiv='Content-Script-Type', content='text/javascript')
+		meta(http-equiv='Content-Style-Type', content='text/css')
+		title #{title}
+		meta(name="description" content="#{description}")
+		meta(name="keywords" content="#{keyword}")
+		meta(property="og:site_name" content!="#{og_name}")
+		meta(property="og:title" content!="#{og_title}")
+		meta(property="og:description" content!="#{og_description}")
+		meta(property="og:url" content!="#{og_url}")
+		meta(property="og:images" content!="http://beerweek.jp/2016/images/ogp_img.jpg")
+		meta(property="og:type" content!="article")
+		meta(property="og:locale" content!="ja_JP")
+		link(rel="stylesheet" type="text/css" href="#{css}" media="all")
+
+	body
+		#main
+			.inner
+				block contents
+			.footter
+				img(src="#{dir_root}common/images/footer_text.png")
