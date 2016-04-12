@@ -384,22 +384,15 @@ h1, h2, h3, h4, h5, h6, p, dl, dt, dd {
     -o-background-size: cover;
        background-size: cover; }
 
-body:before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 5000px;
-  background-image: url("../images/damii.jpg");
-  background-position: top center;
-  background-repeat: no-repeat; }
 body .inner {
-  opacity: 0.5;
   min-width: 1000px; }
   body .inner .mv {
     background-image: url(../images/mv_bg.jpg);
     background-position: top center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+      -o-background-size: cover;
+         background-size: cover; }
     body .inner .mv .title {
       text-align: center;
       display: block;
@@ -410,11 +403,125 @@ body .inner {
         margin: 0 auto; }
       body .inner .mv .title img.text {
         margin-top: 22px; }
-  body .inner .profile .title {
+  body .inner .profile {
+    zoom: 1;
+    width: 1000px;
+    margin: 0 auto; }
+    body .inner .profile:after {
+      content: "";
+      display: block;
+      clear: both; }
+    body .inner .profile .title {
+      text-align: center;
+      margin-top: 112px; }
+    body .inner .profile .activity {
+      background-color: #ffffff;
+      float: left;
+      width: 480px;
+      margin-top: 55px; }
+      body .inner .profile .activity .midashi, body .inner .profile .activity .activitycontent {
+        width: 440px;
+        margin: 0 auto;
+        text-align: left;
+        line-height: 21px; }
+        body .inner .profile .activity .midashi p, body .inner .profile .activity .activitycontent p {
+          font-size: 12px;
+          color: #000000; }
+      body .inner .profile .activity .midashi {
+        margin-top: 15px; }
+      body .inner .profile .activity .activitycontent {
+        margin-top: 20px;
+        padding-bottom: 100px; }
+    body .inner .profile .autorimage {
+      float: right;
+      width: 480px;
+      margin-top: 70px; }
+  body .inner .character {
+    width: 100%;
     text-align: center;
-    margin-top: 112px; }
-  body .inner .profile .activity {
-    background-color: #ffffff; }
-    body .inner .profile .activity .midashi p, body .inner .profile .activity .activitycontent p {
-      font-size: 12px;
-      color: #000000; }
+    margin-top: 134px;
+    position: static; }
+    body .inner .character .title {
+      position: relative;
+      z-index: 4; }
+    body .inner .character .charas {
+      position: static; }
+      body .inner .character .charas .america, body .inner .character .charas .japan, body .inner .character .charas .secret {
+        background-repeat: no-repeat;
+        background-position: 42px 8px;
+        background-position: top;
+        -webkit-transform: rotate(-13.5deg);
+           -moz-transform: rotate(-13.5deg);
+            -ms-transform: rotate(-13.5deg);
+             -o-transform: rotate(-13.5deg);
+                transform: rotate(-13.5deg);
+        position: relative; }
+        body .inner .character .charas .america .box, body .inner .character .charas .japan .box, body .inner .character .charas .secret .box {
+          opacity: 0;
+          -webkit-transform: rotate(13.5deg);
+             -moz-transform: rotate(13.5deg);
+              -ms-transform: rotate(13.5deg);
+               -o-transform: rotate(13.5deg);
+                  transform: rotate(13.5deg);
+          width: 1000px;
+          margin: 0 auto;
+          zoom: 1;
+          position: relative;
+          top: 36px;
+          left: -6px; }
+          body .inner .character .charas .america .box:after, body .inner .character .charas .japan .box:after, body .inner .character .charas .secret .box:after {
+            content: "";
+            display: block;
+            clear: both; }
+          body .inner .character .charas .america .box .left, body .inner .character .charas .japan .box .left, body .inner .character .charas .secret .box .left {
+            float: left; }
+          body .inner .character .charas .america .box .right, body .inner .character .charas .japan .box .right, body .inner .character .charas .secret .box .right {
+            float: right;
+            width: 360px;
+            margin-right: 25px; }
+            body .inner .character .charas .america .box .right .textbox, body .inner .character .charas .japan .box .right .textbox, body .inner .character .charas .secret .box .right .textbox {
+              width: 100%;
+              background-color: #fff;
+              padding: 15px 10px;
+              font-size: 12px;
+              margin-top: 52px;
+              text-align: left; }
+              body .inner .character .charas .america .box .right .textbox p, body .inner .character .charas .japan .box .right .textbox p, body .inner .character .charas .secret .box .right .textbox p {
+                line-height: 22px; }
+            body .inner .character .charas .america .box .right .groupname, body .inner .character .charas .japan .box .right .groupname, body .inner .character .charas .secret .box .right .groupname {
+              text-align: left;
+              margin-top: 28px; }
+        body .inner .character .charas .america:hover .box, body .inner .character .charas .japan:hover .box, body .inner .character .charas .secret:hover .box {
+          opacity: 1; }
+      body .inner .character .charas .america {
+        background-image: url(../images/character_america_bg.png);
+        z-index: 3;
+        margin-top: 10px; }
+      body .inner .character .charas .japan {
+        background-image: url(../images/character_japan_bg.png);
+        z-index: 2;
+        margin-top: -20px; }
+      body .inner .character .charas .secret {
+        background-image: url(../images/character_secret_bg.png);
+        height: 330px;
+        z-index: 1;
+        margin-top: -50px; }
+  body .inner .stamp {
+    text-align: center; }
+    body .inner .stamp .stamps {
+      margin-top: 40px; }
+    body .inner .stamp .linestore img.storebutton {
+      margin-left: -82px;
+      margin-bottom: 34px; }
+    body .inner .stamp .linestore img.or {
+      margin: 0 12px 62px 11px; }
+    body .inner .stamp .linestore img.qr {
+      margin-top: 22px; }
+  body .inner .contact {
+    text-align: center; }
+    body .inner .contact .title {
+      margin-top: 130px; }
+    body .inner .contact .description, body .inner .contact .mail {
+      margin-top: 40px; }
+    body .inner .contact .mail {
+      padding-bottom: 92px; }

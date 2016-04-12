@@ -1,0 +1,64 @@
+// inner用
+@mixin inner(){
+	width: 940px;
+	margin: 0 auto;
+	position: relative;
+}
+
+// テキストを隠し、背景画像を使用する
+@mixin hide_text(){
+	display: block;
+	text-indent: 200%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+// opacity
+@mixin opacity($opacity){
+	opacity: $opacity;
+	-moz-opacity: $opacity;
+	$opacityIE: $opacity * 100;
+	filter: alpha(opacity=$opacityIE);
+}
+
+// clearfix
+@mixin clearfix(){
+	zoom:1;
+	&:after{
+		content: ""; display: block; clear: both;
+	}
+}
+
+@mixin bg_wh($str,$w,$h){
+	background-image: url($str);
+	width:if($w == "auto", auto, $w + 0px);
+	height:if($h == "auto", auto, $h + 0px);
+}
+@mixin bg_text($str,$w,$h){
+	@include hide_text;
+	@include bg_wh($str,$w,$h);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size:contain;
+}
+
+@mixin arrow($size,$line,$color){
+	&:before,&:after{
+		display:block;
+		content:"";
+		width:$size;
+		height:$line;
+		position:absolute;
+		top:50%;
+		left:50%;
+		background-color: $color;
+	}
+	&:before{
+		// margin-right: $size / 4;
+		transform: rotate(-45deg);
+	}
+	&:after{
+		// margin-right: $size / 4*3;
+		transform: rotate(45deg);
+	}
+}

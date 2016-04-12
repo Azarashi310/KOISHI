@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "../common/css/normalize";
+@import "../common/css/mixin";
 #main{
 	background-image: url(../images/bg.jpg);
 	background-position: top center;
@@ -7,23 +8,24 @@
 	background-size: cover;
 }
 body{
-	&:before {
-		content: "";
-		position: absolute;
-		display: block;
-		width: 100%;
-		height: 5000px;
-		background-image: url("../images/damii.jpg");
-		background-position: top center;
-		background-repeat: no-repeat;
-	}
+	//&:before {//damii
+	//	content: "";
+	//	position: absolute;
+	//	display: block;
+	//	width: 100%;
+	//	height: 5000px;
+	//	background-image: url("../images/damii.jpg");
+	//	background-position: top center;
+	//	background-repeat: no-repeat;
+	//}
 	.inner{
-		opacity: 0.5;
+		//opacity: 0.5;
 		min-width: 1000px;
 		.mv{
 			background-image: url(../images/mv_bg.jpg);
 			background-position: top center;
 			background-repeat: no-repeat;
+			background-size: cover;
 			.title{
 				text-align: center;
 				display: block;
@@ -39,28 +41,150 @@ body{
 			}
 		}
 		.profile{
+			@include clearfix();
+			width: 1000px;
+			margin: 0 auto;
+
 			.title{
 				text-align: center;
 				margin-top: 112px;
 			}
 			.activity{
 				background-color: #ffffff;
+				float: left;
+				width: 480px;
+				margin-top: 55px;
 				.midashi,.activitycontent{
+					width: 440px;
+					margin: 0 auto;
+					text-align: left;
+					line-height: 21px;
 					p{
 						font-size: 12px;
 						color: #000000;
 					}
 				}
 				.midashi{
-
+					margin-top: 15px;
 				}
 				.activitycontent{
+					margin-top: 20px;
+					padding-bottom: 100px;
+				}
+			}
+			.autorimage{
+				float: right;
+				width: 480px;
+				margin-top: 70px;
+			}
+		}
+		.character{
+			width: 100%;
+			text-align: center;
+			margin-top: 134px;
+			position: static;
+			.title{
+				position: relative;
+				z-index: 4;
+			}
+			.charas{
+				position: static;
+				.america,.japan,.secret{
+					background-repeat: no-repeat;
+					background-position: 42px 8px;
+					background-position: top;
+					transform: rotate(-13.5deg);
+					position: relative;
+					.box{
+						opacity: 0;
+						transform: rotate(13.5deg);
+						width: 1000px;
+						margin: 0 auto;
+						@include clearfix();
+						position: relative;
+						top: 36px;
+						left: -6px;
+						.left{
+							float: left;
+						}
+						.right{
+							float: right;
+							width: 360px;
+							margin-right: 25px;
+							.textbox{
+								width: 100%;
+								background-color: #fff;
+								padding: 15px 10px;
+								font-size: 12px;
+								margin-top: 52px;
+								//margin-right: 3px;
+								text-align: left;
+								p{
+									line-height: 22px;
+								}
+							}
+							.groupname{
+								text-align: left;
+								margin-top: 28px;
+							}
+						}
+					}
+					&:hover{
+						.box{
+							opacity: 1;
+						}
+					}
+				}
+				.america{
+					background-image: url(../images/character_america_bg.png);
+					z-index: 3;
+					margin-top: 10px;
+				}
+				.japan{
+					background-image: url(../images/character_japan_bg.png);
+					z-index: 2;
+					margin-top: -20px;
+				}
+				.secret{
+					background-image: url(../images/character_secret_bg.png);
+					height: 330px;//provisional
+					z-index: 1;
+					margin-top: -50px;
+				}
 
+			}
+		}
+		.stamp{
+			text-align: center;
+			.title{
+			}
+			.stamps{
+				margin-top: 40px;
+			}
+			.linestore{
+				img.storebutton{
+					margin-left: -82px;
+					margin-bottom: 34px;
+				}
+				img.or{
+					margin: 0 12px 62px 11px;
+				}
+				img.qr{
+					margin-top: 22px;
 				}
 			}
 		}
-	}
-	.footter{
-
+		.contact{
+			text-align: center;
+			.title{
+				margin-top: 130px;
+			}
+			.description,.mail{
+				margin-top: 40px;
+			}
+			.mail{
+				padding-bottom: 92px;
+			}
+		}
 	}
 }
