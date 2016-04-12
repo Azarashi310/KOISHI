@@ -157,6 +157,8 @@ body{
 		.stamp{
 			text-align: center;
 			.title{
+				position: relative;
+				z-index: 1;
 			}
 			.stamps{
 				margin-top: 40px;

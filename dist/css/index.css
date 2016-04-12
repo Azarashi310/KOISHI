@@ -508,6 +508,9 @@ body .inner {
         margin-top: -50px; }
   body .inner .stamp {
     text-align: center; }
+    body .inner .stamp .title {
+      position: relative;
+      z-index: 1; }
     body .inner .stamp .stamps {
       margin-top: 40px; }
     body .inner .stamp .linestore img.storebutton {
